@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48C41EBE777D4FA49BE4D4DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 947422D44331E4307D8F4B49 /* libPods.a */; };
+		65EFCFCE1B0AE66800DDBC67 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EFCFCD1B0AE66800DDBC67 /* MBProgressHUD.m */; };
+		65EFCFD01B0AEA2200DDBC67 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65EFCFCF1B0AEA2200DDBC67 /* 37x-Checkmark@2x.png */; };
 		82138CE91AC7DDFD00E75B78 /* LoginNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 82138CE81AC7DDFD00E75B78 /* LoginNetWork.m */; };
 		82138CED1AC7ED7700E75B78 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 82138CEC1AC7ED7700E75B78 /* MyMD5.m */; };
 		82138CF01AC8055100E75B78 /* mybaby_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 82138CEF1AC8055100E75B78 /* mybaby_top_bg.png */; };
@@ -654,6 +656,9 @@
 
 /* Begin PBXFileReference section */
 		3F684448981A614CEBC5042C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		65EFCFCC1B0AE66800DDBC67 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		65EFCFCD1B0AE66800DDBC67 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		65EFCFCF1B0AEA2200DDBC67 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		82138CE71AC7DDFD00E75B78 /* LoginNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNetWork.h; sourceTree = "<group>"; };
 		82138CE81AC7DDFD00E75B78 /* LoginNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNetWork.m; sourceTree = "<group>"; };
 		82138CEB1AC7ED7700E75B78 /* MyMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMD5.h; sourceTree = "<group>"; };
@@ -1762,6 +1767,30 @@
 				947422D44331E4307D8F4B49 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6503C79A1B0ADF0700409156 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				82DA693D1AC79B69005654E9 /* image */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		6503C79B1B0ADF2B00409156 /* mbimages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = mbimages;
+			sourceTree = "<group>";
+		};
+		65EFCFCB1B0AE62000DDBC67 /* MB */ = {
+			isa = PBXGroup;
+			children = (
+				65EFCFCC1B0AE66800DDBC67 /* MBProgressHUD.h */,
+				65EFCFCD1B0AE66800DDBC67 /* MBProgressHUD.m */,
+			);
+			name = MB;
 			sourceTree = "<group>";
 		};
 		82138CEE1AC8054D00E75B78 /* dongtaiView */ = {
@@ -3167,7 +3196,7 @@
 			children = (
 				82DA6A351AC79CB7005654E9 /* UI */,
 				82DA6A281AC79C34005654E9 /* InheritClass */,
-				82DA693D1AC79B69005654E9 /* image */,
+				6503C79A1B0ADF0700409156 /* images */,
 				82DA68A11AC78C52005654E9 /* basic */,
 				82DA68A21AC78C52005654E9 /* DBModel */,
 				82DA68A31AC78C52005654E9 /* Define */,
@@ -3213,6 +3242,7 @@
 		82DA68A11AC78C52005654E9 /* basic */ = {
 			isa = PBXGroup;
 			children = (
+				65EFCFCB1B0AE62000DDBC67 /* MB */,
 				82B81AB91AE1E01400AD0268 /* baiduDituDemo */,
 				82C285C91AE8488A0001CB58 /* MPMoviePlayer */,
 				82B81A571AE1D65900AD0268 /* EaseMobSDK */,
@@ -3357,6 +3387,8 @@
 		82DA693D1AC79B69005654E9 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				65EFCFCF1B0AEA2200DDBC67 /* 37x-Checkmark@2x.png */,
+				6503C79B1B0ADF2B00409156 /* mbimages */,
 				82B96E931AE998A000EF303A /* teacherImage */,
 				82B827541ADC0628008391CF /* firstTimeEmoji */,
 				82BA944E1AD6671300C85A52 /* QQ */,
@@ -3948,6 +3980,7 @@
 				82BA94441AD6634500C85A52 /* keyboard_switch_pressed.png in Resources */,
 				82BA95211AD6671300C85A52 /* [p95].png in Resources */,
 				82BA950B1AD6671300C85A52 /* [p75].png in Resources */,
+				65EFCFD01B0AEA2200DDBC67 /* 37x-Checkmark@2x.png in Resources */,
 				82BC08BE1AC96CF100FBDB29 /* whiteArrow.png in Resources */,
 				82C353181ACAD6370061141D /* weixuan@2x.png in Resources */,
 				82DA6A221AC79B69005654E9 /* yuandian_02.png in Resources */,
@@ -4495,6 +4528,7 @@
 				82B803111B016F1200D9EB15 /* qinShuJieSongMsgViewController.m in Sources */,
 				8271803C1AE66F160026B6DB /* Tab1_insertFirstTabVC.m in Sources */,
 				82DA687E1AC78773005654E9 /* main.m in Sources */,
+				65EFCFCE1B0AE66800DDBC67 /* MBProgressHUD.m in Sources */,
 				82B6C7741AD01CCC00A6D010 /* chengZhangDataTableViewCell.m in Sources */,
 				82CAACD21AD425ED00583D08 /* chuQinFirstViewController.m in Sources */,
 				82DA6A321AC79C34005654E9 /* HJHMyImageView.m in Sources */,

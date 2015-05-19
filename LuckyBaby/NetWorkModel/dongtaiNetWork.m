@@ -536,8 +536,8 @@
     dic = [networkDicHeader addHeaderDic:dic];
     NSString *urlString = [NSString stringWithFormat:@"%@/school/story/getStoryList",serverAPIAddress];
     
-    self.tipView = [[KGTipView alloc]initWithTitle:nil context:@"数据下载中..." cancelButtonTitle:nil otherCancelButton:nil lockType:LockTypeGlobal delegate:nil userInfo:nil];
-    [self.tipView showWithLoading];
+//    self.tipView = [[KGTipView alloc]initWithTitle:nil context:@"数据下载中..." cancelButtonTitle:nil otherCancelButton:nil lockType:LockTypeGlobal delegate:nil userInfo:nil];
+//    [self.tipView showWithLoading];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
@@ -549,7 +549,7 @@
         if ([flag isEqualToString:@"0"]) {
             [[NSNotificationCenter defaultCenter]postNotificationName:@"getStoryListSuccess" object:responseObject];
             
-            [self.tipView stopLoadingAnimationWithTitle:@"" context:@"下载完成" duration:0.8];
+//            [self.tipView stopLoadingAnimationWithTitle:@"" context:@"下载完成" duration:0.8];
         }
         else{
             NSString *msg = [DictionaryStringTool stringFromDictionary:responseObject forKey:@"msg"];

@@ -15,6 +15,8 @@
 #import "firstXiangQingTableViewCell.h"
 #import "dongtaiNetWork.h"
 #import "firstXiangQingViewController.h"
+
+#import "MBProgressHUD.h"
 #define kDefaultToolbarHeight 42
 #define kIOS7 0
 @interface FirstTabViewController ()<firstXiangQingTableViewCell,sendMessage>
@@ -28,6 +30,8 @@
 @property(nonatomic,strong)NSMutableArray *fisrtXiangQingArray;
 
 @property(nonatomic,assign)NSInteger currentPage;
+
+@property(nonatomic,strong)MBProgressHUD *HUD;
 
 @end
 
@@ -61,6 +65,19 @@
     dongtaiNetWork *donT = [[dongtaiNetWork alloc]init];
     NSDictionary *dic = [plistDataManager getDataWithKey:user_loginList];
     [donT getStoryListWithChildIdFamily:[DictionaryStringTool stringFromDictionary:dic forKey:@"childIdFamilyCurrent"] page:[NSString stringWithFormat:@"%d",self.currentPage] pageSize:@"10"];
+        self.HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:self.HUD];
+    
+        self.HUD.dimBackground = YES;
+    
+        // Regiser for HUD callbacks so we can remove it from the window at the right time
+        self.HUD.delegate = self;
+        self.HUD.labelText=@"正努力加载中";
+    
+     //Show the HUD while the provided method executes in a new thread
+   // [HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
+     [self.HUD show:YES];
+    
 }
 
 #pragma mark -logic data
@@ -112,6 +129,16 @@
         [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loadMoreListDataBack) userInfo:nil repeats:NO];
     }
     [self._tableView reloadData];
+    	UIImage *image = [UIImage imageNamed:@"37x-Checkmark.png"];
+    	UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    	self.HUD.customView = imageView;
+    		self.HUD .labelText = @"加载完成";
+    	self.HUD.mode = MBProgressHUDModeCustomView;
+    
+    
+    [self.HUD hide:YES afterDelay:1];
+    
+  //  [self.HUD hide:YES];
 }
 
 -(void)getStoryListFail:(NSNotification*)noti{
